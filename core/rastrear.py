@@ -36,6 +36,7 @@ def nmap():
     ui.menu_nmap()
     resposta3 = int(input('O que deseja fazer? \n⤷  '))
     if resposta3 == 1:
+        os.environ['PATH'] += r"/usr/bin/nmap"
         nm = PortScanner(input("Digite o IP \n ⤷"))
         print(nm.scaninfo())
     
